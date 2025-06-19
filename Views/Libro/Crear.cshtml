@@ -1,0 +1,109 @@
+﻿@model T3_Vito_Roy.Models.Libro;
+@{
+    ViewData["Title"] = "Crear";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Crear</h1>
+
+<form method="post" asp-action="Crear">
+    <div class="border p-3">
+
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group row">
+            <h2 class="text-intro pl-3">Agregar Libro</h2>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <label asp-for="TItulo" class="form-label">Título del Libro:</label>
+                    <input asp-for="TItulo" class="form-control" />
+                    <span asp-validation-for="TItulo" class="text-danger"></span>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <label asp-for="Autor" class="form-label">Nombre del Autor:</label>
+                    <input asp-for="Autor" class="form-control" />
+                    <span asp-validation-for="Autor" class="text-danger"></span>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <label asp-for="Tema" class="form-label">Tema general:</label>
+                    <input asp-for="Tema" class="form-control" />
+                    <span asp-validation-for="Tema" class="text-danger"></span>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <label asp-for="Editorial" class="form-label">Ingresa el Nombre de la editorial:</label>
+                    <input asp-for="Editorial" class="form-control" />
+                    <span asp-validation-for="Editorial" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <label asp-for="AnioPublicacion" class="form-label">Año de Publicación:</label>
+                    <input asp-for="AnioPublicacion" class="form-control" />
+                    <span asp-validation-for="AnioPublicacion" class="text-danger"></span>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <label asp-for="Paginas" class="form-label">Número de Páginas:</label>
+                    <input asp-for="Paginas" class="form-control" />
+                    <span asp-validation-for="Paginas" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <label asp-for="Categoria" class="form-label">Categoria perteneciente:</label>
+                    <input asp-for="Categoria" class="form-control" />
+                    <span asp-validation-for="Categoria" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <label asp-for="Material" class="form-label">Tipo de Material:</label>
+                    <input asp-for="Material" class="form-control" />
+                    <span asp-validation-for="Material" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <label asp-for="Copia" class="form-label">Número de Copias</label>
+                    <input asp-for="Copia" class="form-control" />
+                    <span asp-validation-for="Copia" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="d-grid gap-2 d-md-block">
+
+                <button type="submit" class="btn btn-primary">Crear Nuevo</button>
+                <a asp-controller="Libro" asp-action="Index" class="btn btn-success">Regresar</a>
+
+            </div>
+
+        </div>
+    </div>
+
+</form>
+
+@section Scripts{
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}                    
